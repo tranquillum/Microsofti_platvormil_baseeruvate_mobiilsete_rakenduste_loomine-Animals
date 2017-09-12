@@ -50,8 +50,8 @@ namespace Animals
             }
 
         }
-        //overloading ja overriding
-        public void Eat( int howManyTimes)
+        //overloading 
+        public virtual void Eat( int howManyTimes)
         {
             for (int i = 0; i < howManyTimes; i++)
             {
@@ -78,10 +78,12 @@ namespace Animals
             
 
         }
-        public void Drink()
+        public virtual void Drink()
         {
             Console.WriteLine("Drinking");
         }
+
+        
 
         public void SetAge(int age)
         {
@@ -117,6 +119,12 @@ namespace Animals
             return this.name;
         }
 
+        public override string ToString()
+        {
+            return String.Format("Looma tuup on {0}, nimi on {1}, vanus {2}, touk on {3}", this.GetType().Name, Name, Age, Breed);
+        }
+
+        
 
     }
 }

@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Cat:Animal
+    class Cat:Pet
     {
         public Toy FavoriteToy { get; set; }
         public void CatchMouse()
         {
             Console.WriteLine("Catcing mouse");
         }
+
+        public override string ToString()
+        {
+            string oldTostring = base.ToString();
+
+            return oldTostring + " new";
+        }
+
+        
 
         //private string name;
         //private int age;

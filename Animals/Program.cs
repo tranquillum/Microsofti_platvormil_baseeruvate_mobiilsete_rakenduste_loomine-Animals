@@ -31,7 +31,7 @@ namespace Animals
             // angora.name = "Liisu";
             // angora.age = -270;
             angora.Drink();
-          
+            angora.Name = "Kittikene";
 
             Dog buldog = new Dog();
             buldog.Name = "Pauk";
@@ -82,7 +82,7 @@ namespace Animals
             //persian.FavoriteToy.Name = "Minni";
             //persian.FavoriteToy.Manufacture.Name = "Disney";
             //persian.FavoriteToy.Manufacture.Adress = "Kabi 2, Tallinn, 12352";
-
+            siam.Breed = "Siam";
 
 
             Console.WriteLine("Kassi nimega {0}, lemmik manguasi on toodetud {1}  poot ja selle manguasi nimi on {2}", persian.Name, persian.FavoriteToy.Manufacture.Name, persian.FavoriteToy.Name );
@@ -111,8 +111,40 @@ namespace Animals
             retriver.Eat(10);
             retriver.Eat(3, "fish");
             retriver.Eat(3, "Meat");
+            retriver.Name = "laika";
 
+            Console.WriteLine(siam.ToString());
+            Console.WriteLine(retriver.ToString());
+            Lion leo = new Lion();
+            leo.Name = "Simba";
+            leo.Breed = "black lion";
+            leo.Age = 4;
+            Console.WriteLine(leo.ToString());
+            leo.Eat(4);
 
+            Cat[] cats = new Cat[3];
+            cats[0] = siam;
+            cats[1] = angora;
+            cats[2] = persian;
+            
+            //prindi valja koigi kasside nimed
+            for (int i = 0; i < cats.Length; i++)
+            {
+                Console.WriteLine(cats[i].Name);
+            }
+            //prindi valja koige vanem kassi
+            int maxAge = cats[0].Age;
+            string name = cats[0].Name;
+            for (int i = 0; i < cats.Length; i++)
+            {
+                if(cats[i].Age>maxAge)
+                {
+                    maxAge = cats[i].Age;
+                    name = cats[i].Name;
+                }
+
+            }
+            Console.WriteLine(name);
 
 
 

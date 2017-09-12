@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Dog : Animal
+    class Dog : Pet 
     {
 
         public DateTime LastSwimmingTime { get; set; }
@@ -42,6 +42,7 @@ namespace Animals
         }
 
         
+
 
 
         //private string name;
