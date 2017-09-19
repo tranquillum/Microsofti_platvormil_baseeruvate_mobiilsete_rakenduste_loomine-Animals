@@ -192,7 +192,7 @@ namespace Animals
 
             foreach (var animal in animallist)
             {
-                Console.WriteLine(animal.ToString(), System.Text.Encoding.UTF8);
+                Console.WriteLine(animal.ToString());
             }
 
             Zoo zoo = new Zoo();
