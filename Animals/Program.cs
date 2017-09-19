@@ -146,10 +146,63 @@ namespace Animals
             }
             Console.WriteLine(name);//
             //
+            Animal animalOne = new Cat();
+            Animal animalTwo = new Dog();
+            Animal[] animals = new Animal[3];
+            animals[0] = animalOne;
+            animals[1] = animalTwo;
+            animals[2] = angora;
+            Pet petOne = new Cat();
+            Pet petTwo = new Dog();
 
+            Pet[] pets = new Pet[3];
 
+            pets[0] = petOne;
+            pets[1] = petTwo;
+            pets[2] = tax;
 
+            Console.WriteLine(animals[0].ToString());
 
+            Cat cat =(Cat) animals[0];
+            Console.WriteLine();
+            int number = (int)3.4;
+            double numberTwo = 2.6;
+            number = (int)numberTwo;
+            numberTwo = number;
+
+            List<Animal> animallist = new List<Animal>();
+            animallist.Add(persian);
+            animallist.Add(tax);
+            animallist.Add(leo);
+
+            foreach (var animal in animallist)
+            {
+                Console.WriteLine(animal.ToString());
+            }
+            Console.WriteLine();
+
+            animallist.Remove(persian);
+            foreach (var animal in animallist)
+            {
+                Console.WriteLine(animal.ToString());
+            }
+
+            Console.WriteLine();
+            animallist.RemoveAt(0);
+
+            foreach (var animal in animallist)
+            {
+                Console.WriteLine(animal.ToString(), System.Text.Encoding.UTF8);
+            }
+
+            Zoo zoo = new Zoo();
+            zoo.AddAnimals(angora);
+            zoo.AddAnimals(tax);
+            zoo.AddAnimals(leo);
+
+            Console.WriteLine("Loomaajas on {0} looma", zoo.GetAnimalCount());
+
+            Console.WriteLine("Loomaajas on {0} lovi", zoo.GetAnimalCount("Lion"));
             Console.ReadLine();
         }
     }
