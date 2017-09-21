@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Lion: Animal
+    class Lion: WildAnimals
     {
         public void Resting()
         {

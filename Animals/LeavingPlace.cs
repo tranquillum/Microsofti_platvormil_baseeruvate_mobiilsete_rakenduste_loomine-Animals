@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Zoo
+    class   LeavingPlace
     {
-        private List<Animal> animals = new List<Animal>();
-        public  void AddAnimals(Animal animal)
+        private  List<Animal> animals = new List<Animal>();
+        public virtual  void AddAnimals(Animal animal)
         {
             animals.Add(animal);
         }
@@ -27,7 +27,7 @@ namespace Animals
             foreach (var animal in animals)
             {
                 if (animal.GetType().Name == "Cat")
-                    count++; 
+                    count++;
             }
             return count;
         }
@@ -37,13 +37,10 @@ namespace Animals
             int count = 0;
             foreach (var animal in animals)
             {
-                if(animal.GetType().Name == animalType)
-                count++;
+                if (animal.GetType().Name == animalType)
+                    count++;
             }
             return count;
         }
-
-
-
     }
 }

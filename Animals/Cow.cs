@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Pet : FarmAnimals
+    class Cow:FarmAnimals
     {
-
-
-
     }
 }

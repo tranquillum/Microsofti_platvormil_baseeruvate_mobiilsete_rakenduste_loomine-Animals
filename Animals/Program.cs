@@ -203,6 +203,19 @@ namespace Animals
             Console.WriteLine("Loomaajas on {0} looma", zoo.GetAnimalCount());
 
             Console.WriteLine("Loomaajas on {0} lovi", zoo.GetAnimalCount("Lion"));
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Farm farm = new Farm();
+            farm.AddAnimals(angora);
+            Console.WriteLine("Loomaajas on {0} looma", farm.GetAnimalCount());
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            farm.AddAnimals(leo);//ebaonnestu
+
             Console.ReadLine();
         }
     }

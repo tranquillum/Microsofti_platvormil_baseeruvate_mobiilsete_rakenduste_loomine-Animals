@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Cat:Pet
+    class Cat:Pet,IWalker
     {
         public Toy FavoriteToy { get; set; }
+        public int LastWalkingDistance { get; set; }
+
         public void CatchMouse()
         {
             Console.WriteLine("Catcing mouse");
+        }
+
+        public string GetWalkingPlaceName()
+        {
+            return "Backyard";
         }
 
         public override string ToString()
@@ -21,7 +28,17 @@ namespace Animals
             return oldTostring + " new";
         }
 
-        
+        public void Walk()
+        {
+            Console.WriteLine("Walging");
+        }
+
+        public void Walk(int meters)
+        {
+            Console.WriteLine("Walking {0} meetrit", meters);
+        }
+
+
 
         //private string name;
         //private int age;
